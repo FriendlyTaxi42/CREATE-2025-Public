@@ -8,7 +8,8 @@ You are not limited to these questions, and are encouraged to think beyond them.
 
 ## Case Study 1: The Invisible Coder
 
-Sarah is part of a team working on a final project for a coding class. The professor allows use of AI tools, but says students must understand everything they submit. 
+Sarah is part of a team working on a final project for a coding class. The professor 
+allows use of AI tools, but says students must understand everything they submit. 
 Sarah uses ChatGPT to generate most of the Flask routes and Firebase integration. 
 She copies and pastes large portions into the project, tweaking only a few lines. 
 The rest of the team doesn’t know how the backend was written. When asked how the 
@@ -37,7 +38,11 @@ implications of using ChatGPT over company tools and vice versa?
 
 ## Case Study 3: AI Resume Screener
 
-A university career platform introduces a new AI-powered resume screener to recommend students for co-op placements. Within a few weeks, a pattern emerges: students with international-sounding names or non-traditional extracurriculars seem to be getting fewer interviews. Some students suspect the AI is biased based on training data, but the company says the system is working “as designed.”
+A university career platform introduces a new AI-powered resume screener to recommend 
+students for co-op placements. Within a few weeks, a pattern emerges: students with 
+international-sounding names or non-traditional extracurriculars seem to be getting 
+fewer interviews. Some students suspect the AI is biased based on training data, 
+but the company says the system is working “as designed.”
 
 ### Questions to consider: 
 . Is the use of AI in this scenario ethical? Why and why not? 
@@ -47,7 +52,12 @@ A university career platform introduces a new AI-powered resume screener to reco
 
 ## Case Study 4: The Autopilot Student
 
-In an intro programming course, the professor tells students that they can use ChatGPT to assist with assignments—but only if they understand and can explain the code. Alex uses ChatGPT to complete every task in the course. He gets full marks, but when asked in a peer review to explain how his program works, he says, “Honestly, I don’t really know. ChatGPT just did it.”
+In an intro programming course, the professor tells students that they 
+can use ChatGPT to assist with assignments—but only if they understand
+and can explain the code. Alex uses ChatGPT to complete every task in 
+the course. He gets full marks, but when asked in a peer review to 
+explain how his program works, he says, “Honestly, I don’t really 
+know. ChatGPT just did it.”
 
 ### Questions to Consider: 
 . Did Alex follow the rules set by the course? Is his use of AI considered to be an academic misconduct? Why or why not? 
