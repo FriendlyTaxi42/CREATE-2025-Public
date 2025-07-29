@@ -13,3 +13,15 @@ target-element {
 You can read more about specific attributes on this site: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference
 */
 
+.big-text{
+    text-align: center;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+.not-so-big-text{
+    text-align: center;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+body{
+   background: #e81313;
+    background: linear-gradient(90deg,rgba(232, 19, 19, 1) 0%, rgba(242, 143, 12, 1) 17%, rgba(238, 255, 0, 1) 33%, rgba(12, 240, 35, 1) 50%, rgba(0, 225, 255, 1) 66%, rgba(103, 107, 212, 1) 83%, rgba(195, 0, 255, 1) 100%);
+}
