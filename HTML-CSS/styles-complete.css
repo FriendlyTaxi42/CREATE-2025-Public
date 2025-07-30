@@ -3,92 +3,97 @@ This file contains the complete code for the CSS workshop for CREATE 2025: SWE.
 */
 
 /* Table of Contents*/
-a:link {
-    color: #41518c;
-} 
 
-a:visited {
+h1{
+    font-family: Sofia; 
+    color: #8a581c;
+    font-size: 50px;
+}
+
+h2{
+    font-family: Literata;
+    color: #402e18;
+    margin-left: 4rem;
+}
+
+h3{
+    font-family: Sorts Mill Goudy;
+    color: #402e18;
+}
+
+p{
+    font-family: Winky Rough;
+    color: #402e18;
+}
+
+.fancy-font{
+    font-family: Winky Rough;
+}
+
+img{
+    height: 150px;
+    border-radius: 10%;
+}
+
+body{
+    background-color: #e8dbb7;
+    padding: 1rem 6rem;
+}
+
+.wrap-text{
+    float: left;
+    margin-right: 20px;
+}
+
+.pad{
+    padding-bottom: 110px;
+}
+
+hr{
+    border: 0;
+    height: 1px;
+    background: rgb(46, 37, 28);
+    margin-top: 3rem;
+}
+
+a:link{
+    color: #41518c;
+}
+
+a:visited{
     color: #372f69;
 }
-a:hover {
+
+a:hover{
     color: #0b1847;
 }
-a:active {
+
+a:active{
     color: rgb(120, 140, 186);
 }
 
-.contents-pic {
+.contents-pic{
     margin-left: 25%;
     width: 30%;
     height: 30%;
 }
 
-li {
+li{
     margin-bottom: 3px;
 }
 
-ol {
+ol{
     float: left;
     margin-left: 4rem;
-
 }
 
-/* Fonts and Text Setting*/
-h1 {
-    font-family: "Sofia";
-    color: #8a581c; 
-    font-size: 50px
-}
-
-h2 {
-    font-family: "Literata";
-    color: #402e18;
-    margin-left: 4rem;
-}
-
-h3 {
-    font-family: "Sorts Mill Goudy";
-    color: #402e18;
-}
-
-p, a {
-    font-family: "Winky Rough";
-    color: #402e18;
-
-}
-
-/* Media and Overall Format*/
-img {
-    height: 150px;
-    border-radius: 10%;
-}
-
-body {
-    background-color: #e8dbb7;
-    padding: 1rem 6rem;
-}
-
-.wrap-text {
-    float: left; 
-    margin-right: 20px;
- }
-
-.pad {
-    padding-bottom: 110px;
-}
-
-/* Other Elements */
-hr {
-    border:0;
-    height:1px;
-    background:rgb(46, 37, 28);
-    margin-top: 3rem;
-}
-
-/* Adaptive Behaviour */
-
-html {
+html{
     scroll-behavior: smooth;
+}
+
+.toc-links{
+    font-size: 20px;
+    font-family: Winky Rough;
 }
 
 @media (max-width: 700px) {
