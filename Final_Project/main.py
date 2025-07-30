@@ -1,3 +1,15 @@
+"""
+This is a template for a Flask file for developing your web apps. 
+Feel free to fork and clone this to modify as needed, or if you prefer, start from scratch on a new file.
+
+Please ensure that this file is located in the main directory of your project.
+
+To run, cd into your project directory and then run the following command:
+flask --app (name of your project) run --debug
+"""
+
+from flask import Flask, render_template # imports
+
 import colorsys
 import math
 
@@ -89,15 +101,25 @@ def complementhls(h, l, s):
 
     return h, l, s
 
-    
+def rgbtohex(r, g, b):
+    return '{:02X}{:02X}{:02X}'.format(r, g, b)
+
+
+app = Flask(__name__) # create Flask app
 
 
 
+"""
+Don't delete the code below! Needed for running the app.
+"""
+@app.route("/")
+def index():
+    bg_color = rgbtohex(37, 99, 235)
+    return render_template('index.html', bg_color=bg_color)
 
-print(convertroundrgb(192, 64, 1))
-print(convertroundhsl(19.79057, 98.96373, 37.84313725))
-print(complementrgb(192, 64, 1))
 
+if __name__ == "__main__":
+    app.run(debug=True)
 
 
 
