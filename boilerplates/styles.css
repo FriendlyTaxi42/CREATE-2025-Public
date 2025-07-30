@@ -32,3 +32,26 @@ body{
     font-weight: bolder;
     font-size: 30px;
 }
+.ooo{
+    text-align: center;
+}
+
+.mystery-btn .btn-text {
+    transition: opacity 0.2s;
+}
+
+.mystery-btn:hover .btn-text {
+    opacity: 0;
+}
+
+.mystery-btn:hover::after {
+    content: "of mystery...";
+    color: white;
+    background: black;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    pointer-events: none;
+}
