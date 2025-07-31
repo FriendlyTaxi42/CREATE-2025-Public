@@ -1,0 +1,22 @@
+body {
+    background-color: gainsboro;
+}
+
+h1 {
+    color:gray;
+    font-family:'Times New Roman', Times, serif;
+    font-size:50px;
+    margin:4rem;
+    font-weight:bold;
+    color:blue
+}
+
+
+.PreMadeColourDiv {
+    text-align: center;
+    align-items: center;
+    align-self: center;
+    border:0px;
+    font-family: 'Times New Roman', Times, serif;
+
+}

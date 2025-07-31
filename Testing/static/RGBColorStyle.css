@@ -1,0 +1,12 @@
+h1{
+    text-align: center;
+    font-weight: bold;
+    color: blue;
+}
+form{
+    align-items: center;
+    text-align: center;
+}
+fieldset{
+    border: none;
+}

@@ -1,18 +1,5 @@
-"""
-This is a template for a Flask file for developing your web apps. 
-Feel free to fork and clone this to modify as needed, or if you prefer, start from scratch on a new file.
-
-Please ensure that this file is located in the main directory of your project.
-
-To run, cd into your project directory and then run the following command:
-flask --app (name of your project) run --debug
-"""
-
-from flask import Flask, render_template # imports
-
 import colorsys
 import math
-
 
 def convertrgb(r, g, b):
     # Normalize RGB values to 0.0-1.0 range
@@ -101,37 +88,24 @@ def complementhls(h, l, s):
     return h, l, s
 
 def rgbtohex(r, g, b):
-    return '{:02X}{:02X}{:02X}'.format(r, g, b)
+    return '#' + '{:02X}{:02X}{:02X}'.format(r, g, b)
 
 def hextorgb(hexcode):
     r, g, b = (tuple(int(hexcode[i:i+2], 16) for i in (1, 3, 5)))
     return r, g, b
 
 def complementhex(hexcode):
-    r, g, b = (tuple(int(hexcode[i:i+2], 16) for i in (1, 3, 5)))
-    return rgbtohex(complementrgb(r, g, b))
-
-app = Flask(__name__) # create Flask app
-
-
-
-"""
-Don't delete the code below! Needed for running the app.
-"""
-@app.route("/")
-def index():
-    r = 37
-    g = 99
-    b = 235
+    r, g, b = hextorgb(hexcode)
     cr, cg, cb = complementrgb(r, g, b)
-    hexcode = rgbtohex(cr, cg, cb)
-    bg_color = "#" + hexcode
-    return render_template('index.html', bg_color=bg_color)
+    newhex = rgbtohex(cr, cg, cb)
+    return newhex
 
 
-if __name__ == "__main__":
-    app.run(debug=True)
-
-
-
+r, g, b = 64, 191, 119
+print(convertroundrgb(r, g, b))
+print(complementrgb(r, g, b))
+hex = rgbtohex(64, 191, 119)
+print(hex)
+newhex = complementhex(hex)
+print(newhex)
 

@@ -8,7 +8,7 @@ To run, cd into your project directory and then run the following command:
 flask --app (name of your project) run --debug
 """
 
-from flask import Flask, render_template # imports
+from flask import Flask, render_template, request # imports
 
 import colorsys
 import math
@@ -79,24 +79,34 @@ def convertroundhsl(h, s, l):
     return r, g, b
 
 def complementrgb(r,g,b):
-    hls_h, hls_l, hls_s = convertrgb(r, g, b)
+    if r == 0 and g == 0 and b == 0:
+        return 255, 255, 255
+    elif r == 255 and g == 255 and b == 255:
+        return 0, 0, 0
+    else:
+        hls_h, hls_l, hls_s = convertrgb(r, g, b)
 
-    hls_h += 180
-    if hls_h >= 360:
-        hls_h -= 360
+        hls_h += 180
+        if hls_h >= 360:
+            hls_h -= 360
 
-    r, g, b = converthsl(hls_h, hls_s, hls_l)
+        r, g, b = converthsl(hls_h, hls_s, hls_l)
 
-    r = round(r)
-    g = round(g)
-    b = round(b)
+        r = round(r)
+        g = round(g)
+        b = round(b)
 
-    return r, g, b
+        return r, g, b
 
 def complementhls(h, l, s):
-    h += 180
-    if h >= 360:
-        h -= 360
+    if h == 0 and l == 0 and s == 0:
+        return 0, 100, 0
+    elif h == 0 and l == 100 and s == 0:
+        return 0, 0, 0
+    else:
+        h += 180
+        if h >= 360:
+            h -= 360
 
     return h, l, s
 
@@ -118,15 +128,31 @@ app = Flask(__name__) # create Flask app
 """
 Don't delete the code below! Needed for running the app.
 """
-@app.route("/")
+@app.route("/", methods=["GET", "POST"])
 def index():
     r = 37
     g = 99
     b = 235
+    if request.method == "POST":
+        try:
+            r = int(request.form.get("r", r))
+            g = int(request.form.get("g", g))
+            b = int(request.form.get("b", b))
+        except Exception:
+            r = 37
+            g = 99
+            b = 235
+    oghex = rgbtohex(r, g, b)
+    og_color = "#" + oghex
     cr, cg, cb = complementrgb(r, g, b)
     hexcode = rgbtohex(cr, cg, cb)
-    bg_color = "#" + hexcode
-    return render_template('index.html', bg_color=bg_color)
+    comp_color = "#" + hexcode
+    return render_template(
+        'RGBColor.html', 
+        og_color = og_color, 
+        comp_color=comp_color,
+        r = r, g = g, b = b
+    )
 
 
 if __name__ == "__main__":

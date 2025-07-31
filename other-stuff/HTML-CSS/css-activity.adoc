@@ -1,0 +1,125 @@
+# Welcome to the CSS Workshop!
+
+This workshop will walk you through styling the café page we previously built. This time,
+there is little starter code but you’ll get more experience playing around with different
+attributes.
+
+*Your first task*: Take some time to review the code in the HTML file, and make sure you
+understand the way each of the elements work together. If you were unable to complete
+the HTML lab, the starter code will be the completed version, including the table of
+contents.
+ 
+*Now it's time to code!* Make sure you are now editing the CSS document. We’ll begin by
+adding simple edits to this file, and then incorporate classes afterwards (which require
+edits to both the HTML files too).
+
+For each section, first create CSS rules for all of the elements below and then modify them
+as specified.
+
+*Formatting Fonts and Text:*
+
+*h1* +
+- font-family is Sofia +
+- color is #8a581c +
+- font-size is 50px 
+
+*h2* +
+- font-family is Literata +
+- color is #402e18 +
+- margin-left is 4rem
+
+*h3* +
+- font-family is Sorts Mill Goudy +
+- color is #402e18
+
+*p* +
+- font-family is Winky Rough +
+- color is #402e18
+
+*.fancy-font* +
+- font-family is Winky Rough
+
+Notice how all the font families were imported in the head of the HTML document! In your
+own projects, you would normally have to play around and pick your own colors online
+(search “color picker”) as well as your own fonts (search “google fonts”).
+
+*Media and Overall Format:* +
+*img* +
+- height is 150px +
+- border-radius is 10% (smooths out the image outline to a rounded rectangle)
+
+*body* +
+- background-color is #e8dbb7 +
+- padding is 1rem 6rem (this is a shorthand form to set the padding for the top/bottom and left/right sides respectively)
+
+*.wrap-text* +
+- float is left +
+- margin-right is 20px
+
+*.pad* +
+- padding-bottom is 110px
+
+*Other Elements:* +
+*hr* +
+- border is 0 +
+- height is 1px +
+- background is rgb(46, 37, 28) +
+- margin-top is 3rem
+
+These properties effectively change the color of the hr element by reducing its original
+border size and creating a 1px wide line with the given background color.
+
+*Table of Contents:* +
+*a:link* +
+- color is #41518c 
+
+*a:visited* +
+- color is #372f69
+
+*a:hover* +
+- color is #0b1847
+
+*a:active* +
+- color is rgb(120, 140, 186)
+
+In order, each of these elements control the regular color of the link, the color of the link
+once it’s been visited, the color of the link when you hover over it with the cursor, and the
+color of the link when it is clicked.
+
+*.contents-pic* +
+- margin-left is 25% +
+- width is 30% +
+- height is 30%
+
+*li* +
+- margin-bottom is 3px +
+
+*ol* +
+- float is left +
+- margin-left is 4rem 
+
+*Adaptive Behaviour* +
+*html* +
+- scroll-behaviour is smooth
+
+*@media(max-width: 700px)* +
+- has another nested .pad class with attribute padding-bottom +
+- padding-bottom is 2vw
+
+This last element controls the behaviour of the padding element when the screen size
+changes (i.e: if you switch from viewing the site on your laptop to your phone, or if you
+change the browser window size)
+
+## END OF CSS DOCUMENT - SWITCH TO HTML DOCUMENT
+
+We’ve finished editing all the elements we have, as well as all the classes for our document.
+All that’s left is to implement it in the HTML file.
+
+[begin=2]
+. For each div element in the ordered list element (NOT in the table of contents), add
+the class “pad”. +
+. In each image element, add the class "wrap-text".
+. For the Table of Contents, make sure to add id attributes matching the hrefs for each of the cafes so that we don't have broken links!
+
+Congrats! You've just created a café webpage!
+

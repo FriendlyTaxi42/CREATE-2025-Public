@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel = "stylesheet" href = "../static/RGBColorStyle.css">
+    </head>
+    <body>
+        <h1>RGB COLOUR PICKER</h1>
+        <form method="POST" action="/">
+            <fieldset>
+                <legend></legend>
+                <label for="r"><h2>Red</h2></label>
+                <input type="number" id="r" name="r" min="0" max="255" required value="{{ r|default(37) }}"><br>
+                <label for="g"><h2>Green</h2></label>
+                <input type="number" id="g" name="g" min="0" max="255" required value="{{ g|default(99) }}"><br>
+                <label for="b"><h2>Blue</h2></label>
+                <input type="number" id="b" name="b" min="0" max="255" required value="{{ b|default(235) }}"><br>
+
+            </fieldset>
+            <input type="submit" value = "Enter"><br>
+            <input type = "reset" value = "Click here to reset">
+            <div>
+                <svg width="300" height="130" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="200" height="100" x="35" y="10" rx="20" ry="20" style ="fill: {{ og_color }};" />
+                </svg>
+                <svg width="300" height="130" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="200" height="100" x="40" y="10" rx="20" ry="20" style ="fill: {{ comp_color }};" />
+                </svg>
+            </div>
+        </form>
+    </body>
+</html>   
